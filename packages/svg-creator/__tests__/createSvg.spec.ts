@@ -1,3 +1,4 @@
+import { it, expect } from "bun:test";
 import * as fs from "fs";
 import * as path from "path";
 import { createSvg, DrawOptions as DrawOptions } from "..";
@@ -37,7 +38,7 @@ for (const [key, grid] of Object.entries(grids))
       null,
       chain,
       drawOptions,
-      animationOptions
+      animationOptions,
     );
 
     expect(svg).toBeDefined();

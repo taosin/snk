@@ -1,3 +1,4 @@
+import { it, expect } from "bun:test";
 import { getBestRoute } from "../getBestRoute";
 import { snake3, snake4 } from "@snk/types/__fixtures__/snake";
 import {
@@ -16,7 +17,7 @@ for (const { width, height, snake } of [
   { width: 5, height: 5, snake: snake4 },
 ])
   it(`should find solution for ${n} ${width}x${height} generated grids for ${getSnakeLength(
-    snake
+    snake,
   )} length snake`, () => {
     const results = Array.from({ length: n }, (_, seed) => {
       const grid = createFromSeed(seed, width, height);
